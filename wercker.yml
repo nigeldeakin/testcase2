@@ -1,5 +1,5 @@
 build:
-  box: golang
+  box: alpine
   steps:
     # Test the project
     - script:
@@ -10,8 +10,8 @@ build:
           echo Displaying VAR1 using echo
           echo VAR1=$VAR1
     - script:
-        name: Unit tests
-        code: go test ./...     
+        name: Install Curl (needed if box is alpine)
+        code: apk --no-cache add curl            
     - internal/docker-build: 
         dockerfile: Dockerfile 
         image-name: my-new-image # name used to refer to this image until it's pushed   
