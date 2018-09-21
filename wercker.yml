@@ -39,4 +39,4 @@ build:
         username: $USERNAME # Docker Hub username. When using CLI, set using "export X_USERNAME=<username>"  
         password: $PASSWORD # Docker Hub password. When using CLI, set using "export X_PASSWORD=<password>" 
         repository: docker.io/$USERNAME/superduper
-        tag: tag1,tag2
+        tag: tag1,$VAR1
