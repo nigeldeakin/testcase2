@@ -6,9 +6,9 @@ build:
         name: Look at some environment variables
         code: |
           echo Displaying VAR1 using env
-          env | grep VAR1
-          echo Displaying VAR1 using echo
-          echo VAR1=$VAR1
+          #env | grep VAR1
+          #echo Displaying VAR1 using echo
+          #echo VAR1=$VAR1
     - script:
         name: Install Curl (needed if box is alpine)
         code: apk --no-cache add curl            
