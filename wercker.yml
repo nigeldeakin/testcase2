@@ -6,7 +6,7 @@ build:
         name: Look at some environment variables
         code: |
           echo Displaying VAR1 using env
-          env | grep WERCKER_GIT_REPOSITORY
+          env | grep R1
           #echo Displaying VAR1 using echo
           #echo VAR1=$VAR1
     - script:
