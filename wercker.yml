@@ -1,14 +1,9 @@
+#command-timeout: 1
+no-response-timeout: 1
 build:
   box: alpine
   steps:
     # Test the project
-    - script:
-        name: Look at some environment variables
-        code: |
-          echo Displaying VAR1 using env
-          env | grep R1
-          #echo Displaying VAR1 using echo
-          #echo VAR1=$VAR1
     - script:
         name: Install Curl (needed if box is alpine)
         code: apk --no-cache add curl            
@@ -34,9 +29,17 @@ build:
             fi        
     - internal/docker-kill:
         name: myTestContainer               
-    - internal/docker-push: 
-        image-name: my-new-image
-        username: $USERNAME # Docker Hub username. When using CLI, set using "export X_USERNAME=<username>"  
-        password: $PASSWORD # Docker Hub password. When using CLI, set using "export X_PASSWORD=<password>" 
-        repository: docker.io/$USERNAME/superduper
-        tag: tag1,$VAR1
+#    - internal/docker-push: 
+#        image-name: my-new-image
+#        username: $USERNAME # Docker Hub username. When using CLI, set using "export X_USERNAME=<username>"  
+#        password: $PASSWORD # Docker Hub password. When using CLI, set using "export X_PASSWORD=<password>" 
+#        repository: docker.io/$USERNAME/wercker-test-foo
+#        tag: fiddle
+    - script:
+        code: |
+          echo Zzzzzzzzzz
+          sleep 100
+  after-steps:
+    - script:
+        name: An after step
+        code: echo "This is the after step"
