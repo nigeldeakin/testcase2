@@ -1,4 +1,4 @@
-command-timeout: 3
+#command-timeout: 3
 #no-response-timeout: 3
 build:
   docker: true
@@ -16,8 +16,11 @@ build:
         code: |
           docker ps
           sleep 5000
+          echo sleep finished
     - script:
         name: An after step 2
         code: |
           docker ps
           sleep 5000
+          echo sleep finished
+
