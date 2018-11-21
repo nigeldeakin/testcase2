@@ -1,5 +1,5 @@
-#command-timeout: 10
-no-response-timeout: 3
+command-timeout: 3
+#no-response-timeout: 3
 build:
   docker: true
   box: alpine
