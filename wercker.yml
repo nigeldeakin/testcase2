@@ -1,5 +1,3 @@
-#command-timeout: 3
-#no-response-timeout: 3
 build:
   docker: true
   box: alpine
@@ -9,12 +7,12 @@ build:
         code: echo hello
   after-steps:
     - script:
-        name: An after step 2
+        name: After step 1
         code: |
           sleep 5000
           echo sleep finished
     - script:
-        name: An after step 2
+        name: After step 2
         code: |
           sleep 5000
           echo sleep finished
