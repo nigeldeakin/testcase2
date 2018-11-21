@@ -5,22 +5,17 @@ build:
   box: alpine
   steps:
     - script:
-        name: Install docker
-        code: apk --no-cache add docker     
-    - script:
-        name: Run a container in the foreground    
-        code: docker run -d -p 27017:27017 -v ~/mongo/data:/data/db mongo   
+        name: Say hello
+        code: echo hello
   after-steps:
     - script:
         name: An after step 2
         code: |
-          docker ps
           sleep 5000
           echo sleep finished
     - script:
         name: An after step 2
         code: |
-          docker ps
           sleep 5000
           echo sleep finished
 
