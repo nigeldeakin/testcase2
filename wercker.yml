@@ -9,11 +9,11 @@ build:
     - script:
         name: After step 1
         code: |
-          sleep 5
+          sleep 60
           echo sleep finished
     - script:
         name: After step 2
         code: |
-          sleep 5
+          sleep 60
           echo sleep finished
 
