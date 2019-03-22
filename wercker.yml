@@ -31,9 +31,6 @@ test-command-timeout:
             #echo Loop $n
             date
           done  
-ten-minutes-1:
-  box: ubuntu
-  steps:
     - script:
         name:  "Sleep for 20 minutes, generating output every minute"
         code: |
@@ -42,9 +39,6 @@ ten-minutes-1:
             sleep 60
             date
           done  
-ten-minutes-2:
-  box: ubuntu
-  steps:
     - script:
         name:  "Sleep for 20 minutes, generating output every minute"
         code: |
@@ -53,9 +47,6 @@ ten-minutes-2:
             sleep 60
             date
           done  
-ten-minutes-3:
-  box: ubuntu
-  steps:
     - script:
         name:  "Sleep for 20 minutes, generating output every minute"
         code: |
@@ -64,9 +55,6 @@ ten-minutes-3:
             sleep 60
             date
           done  
-ten-minutes-4:
-  box: ubuntu
-  steps:
     - script:
         name:  "Sleep for 20 minutes, generating output every minute"
         code: |
@@ -75,9 +63,6 @@ ten-minutes-4:
             sleep 60
             date
           done  
-ten-minutes-5:
-  box: ubuntu
-  steps:
     - script:
         name:  "Sleep for 20 minutes, generating output every minute"
         code: |
@@ -86,9 +71,6 @@ ten-minutes-5:
             sleep 60
             date
           done  
-ten-minutes-6:
-  box: ubuntu
-  steps:
     - script:
         name:  "Sleep for 10 minutes, generating output every minute"
         code: |
