@@ -17,7 +17,7 @@ test-no-response-timeout:
           do
             sleep 60
             #echo Loop $n
-            date
+            #date
           done  
           echo Yarn. What's the time?         
 test-command-timeout:
