@@ -10,14 +10,28 @@ test-no-response-timeout:
   box: ubuntu
   steps:
     - script:
-        name:  takes 10 minutes without generating output
+        name:  "Sleep for 10 minutes without generating output" - should trigger no-response-timeout after 5 minutes"
         code: |
-          echo "I am about to have a snooze for fifteen minutes. Do not expect any output until I wake up."
-          for (( n=0; n<15; n++))
+          echo "I am about to have a snooze for ten minutes. Do not expect any output until I wake up."
+          for (( n=0; n<10; n++))
           do
             sleep 60
             #echo Loop $n
             date
           done  
-          echo Yarn. What's the time?          
+          echo Yarn. What's the time?         
+test-command-timeout:
+  box: ubuntu
+  steps:
+    - script:
+        name:  "Sleep for 30 minutes, generating output every minute - should trigger command-timeout after 25 mins"
+        code: |
+          echo "I am about to have a snooze for fifteen minutes. Do not expect any output until I wake up."
+          for (( n=0; n<30; n++))
+          do
+            sleep 60
+            echo Loop $n
+            date
+          done  
+          echo Yarn. What's the time?               
 
