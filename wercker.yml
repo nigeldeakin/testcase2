@@ -3,12 +3,14 @@ build:
   box: ubuntu
   steps:
     - script:
-        name:  takes 5 minutes
+        name:  takes 10 minutes without generating output
         code: |
+          echo I am about to have a snooze for ten minutes. Don't expect any output until I wake up.
           for (( n=0; n<5; n++))
           do
             sleep 60
-            echo Loop $n
+            #echo Loop $n
             date
           done  
+          echo Yarn. What's the time?
 
