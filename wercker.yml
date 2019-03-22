@@ -3,6 +3,13 @@ build:
   box: ubuntu
   steps:
     - script:
+        name:  This pipeline does not do anything
+        code: |
+          echo "This pipeline does not do anything"
+test-no-response-timeout:
+  box: ubuntu
+  steps:
+    - script:
         name:  takes 10 minutes without generating output
         code: |
           echo "I am about to have a snooze for fifteen minutes. Do not expect any output until I wake up."
@@ -12,5 +19,5 @@ build:
             #echo Loop $n
             date
           done  
-          echo Yarn. What's the time?
+          echo Yarn. What's the time?          
 
