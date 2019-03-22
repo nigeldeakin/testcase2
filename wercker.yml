@@ -1,6 +1,6 @@
 
 build:
-  box: ubunto
+  box: ubuntu
   steps:
     - script:
         name:  takes 5 minutes
