@@ -5,8 +5,8 @@ build:
     - script:
         name:  takes 10 minutes without generating output
         code: |
-          echo I am about to have a snooze for ten minutes. Don't expect any output until I wake up.
-          for (( n=0; n<5; n++))
+          echo "I am about to have a snooze for ten minutes. Do not expect any output until I wake up."
+          for (( n=0; n<10; n++))
           do
             sleep 60
             #echo Loop $n
