@@ -1,11 +1,11 @@
 
 build:
-  box: alpine
+  box: ubunto
   steps:
     - script:
-        name: This step takes 5 minutes
+        name:  takes 5 minutes
         code: |
-          for ((n=0;n<5;n++))
+          for (( n=0; n<5; n++))
           do
             sleep 60
             echo Loop $n
