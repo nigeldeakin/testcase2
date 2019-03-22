@@ -10,7 +10,7 @@ test-no-response-timeout:
   box: ubuntu
   steps:
     - script:
-        name:  "Sleep for 10 minutes without generating output" - should trigger no-response-timeout after 5 minutes"
+        name:  "Sleep for 10 minutes without generating output - should trigger no-response-timeout after 5 minutes"
         code: |
           echo "I am about to have a snooze for ten minutes. Do not expect any output until I wake up."
           for (( n=0; n<10; n++))
