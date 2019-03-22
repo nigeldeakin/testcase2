@@ -1,19 +1,14 @@
+
 build:
-  docker: true
   box: alpine
   steps:
     - script:
-        name: Say hello
-        code: echo hello
-  after-steps:
-    - script:
-        name: After step 1
+        name: This step takes 5 minutes
         code: |
-          sleep 60
-          echo sleep finished
-    - script:
-        name: After step 2
-        code: |
-          sleep 60
-          echo sleep finished
+          for ((n=0;n<5;n++))
+          do
+            sleep 60
+            echo Loop $n
+            date
+          done  
 
