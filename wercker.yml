@@ -16,8 +16,6 @@ test-no-response-timeout:
           for (( n=0; n<10; n++))
           do
             sleep 60
-            #echo Loop $n
-            #date
           done  
           echo Yarn. What's the time?         
 test-command-timeout:
@@ -30,8 +28,73 @@ test-command-timeout:
           for (( n=0; n<30; n++))
           do
             sleep 60
-            echo Loop $n
+            #echo Loop $n
             date
           done  
-          echo Yarn. What's the time?               
+ten-minutes-1:
+  box: ubuntu
+  steps:
+    - script:
+        name:  "Sleep for 20 minutes, generating output every minute"
+        code: |
+          for (( n=0; n<20; n++))
+          do
+            sleep 60
+            date
+          done  
+ten-minutes-2:
+  box: ubuntu
+  steps:
+    - script:
+        name:  "Sleep for 20 minutes, generating output every minute"
+        code: |
+          for (( n=0; n<20; n++))
+          do
+            sleep 60
+            date
+          done  
+ten-minutes-3:
+  box: ubuntu
+  steps:
+    - script:
+        name:  "Sleep for 20 minutes, generating output every minute"
+        code: |
+          for (( n=0; n<20; n++))
+          do
+            sleep 60
+            date
+          done  
+ten-minutes-4:
+  box: ubuntu
+  steps:
+    - script:
+        name:  "Sleep for 20 minutes, generating output every minute"
+        code: |
+          for (( n=0; n<20; n++))
+          do
+            sleep 60
+            date
+          done  
+ten-minutes-5:
+  box: ubuntu
+  steps:
+    - script:
+        name:  "Sleep for 20 minutes, generating output every minute"
+        code: |
+          for (( n=0; n<20; n++))
+          do
+            sleep 60
+            date
+          done  
+ten-minutes-6:
+  box: ubuntu
+  steps:
+    - script:
+        name:  "Sleep for 10 minutes, generating output every minute"
+        code: |
+          for (( n=0; n<10; n++))
+          do
+            sleep 60
+            date
+          done                                
 
