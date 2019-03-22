@@ -31,6 +31,9 @@ test-command-timeout:
             #echo Loop $n
             date
           done  
+test-long-pipeline:
+  box: ubuntu
+  steps:          
     - script:
         name:  "Sleep for 20 minutes, generating output every minute"
         code: |
